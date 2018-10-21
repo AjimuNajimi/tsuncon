@@ -1,4 +1,4 @@
-# tsuncon
+# Tsuncon
 
 Tsucon let you know how many contribution on GitHub today.
 
