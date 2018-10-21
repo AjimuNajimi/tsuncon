@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"strconv"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -33,8 +34,12 @@ func printUsage() {
 }
 
 func getContributions(username string) error {
+	t := time.Now()
+	layout := "2006-01-02"
+	ymd := t.Format(layout)
+
 	// Set URL
-	url := "https://github.com/users/" + username + "/contributions"
+	url := "https://github.com/users/" + username + "/contributions?to=" + ymd
 
 	// Get document
 	doc, err := goquery.NewDocument(url)
