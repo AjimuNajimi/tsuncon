@@ -29,7 +29,7 @@ func main() {
 func printUsage() {
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < 私の名前はつん子よ！")
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < 面倒だけどあんたの今日のContribution数を教えてあげるわ、感謝しなさい！")
-	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < こういう風に言ってくれれば教えてあげるわ -> 'tsuncon <your GitHub name>'")
+	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < こういう風に言ってくれれば教えてあげるわ -> 'tsuncon <your GitHub username>'")
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < じゃあね！")
 }
 
@@ -65,7 +65,7 @@ func getContributions(username string) error {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < もっとやれるんじゃないの？")
 		} else if 6 <= attrint && attrint <= 10 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < まあまあね、褒めてあげる")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < まあまあね、褒めてあげる。")
 		} else {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < へぇ、なかなかやるわね。ちょっと見直したかも。")

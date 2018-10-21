@@ -13,7 +13,7 @@ go get github.com/diplozoon/tsuncon
 ## Usage
 
 ```bash
-tsuncon <your GitHub name>
+tsuncon <your GitHub username>
 ```
 
 ## License
