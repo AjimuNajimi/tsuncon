@@ -55,16 +55,13 @@ func getContributions(username string) error {
 		if 0 <= attrint && attrint <= 1 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contribution is " + attr + ".")
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Let's contribute!")
-		}
-		if 2 <= attrint && attrint <= 5 {
+		} else if 2 <= attrint && attrint <= 5 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Let's contribute!")
-		}
-		if 6 <= attrint && attrint <= 10 {
+		} else if 6 <= attrint && attrint <= 10 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Nice!")
-		}
-		if 11 <= attrint {
+		} else {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Greeeeat!")
 		}
