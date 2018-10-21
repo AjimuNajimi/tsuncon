@@ -34,6 +34,7 @@ func printUsage() {
 }
 
 func getContributions(username string) error {
+	// Deal with time zone
 	t := time.Now()
 	layout := "2006-01-02"
 	ymd := t.Format(layout)
