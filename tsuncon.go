@@ -4,8 +4,6 @@ import (
 	"flag"
 	"fmt"
 	"os"
-
-	"github.com/google/go-github/github"
 )
 
 func main() {
@@ -33,5 +31,5 @@ func printUsage() {
 
 func getContributions(username string) error {
 	// processing
-	client := github.NewClient(nil)
+	return nil
 }
