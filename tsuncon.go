@@ -3,6 +3,9 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os"
+
+	"github.com/google/go-github/github"
 )
 
 func main() {
@@ -10,19 +13,25 @@ func main() {
 	flag.Parse()
 	args := flag.Args()
 
+	// If args is nothing, print usage and exit.
 	if len(args) == 0 {
 		printUsage()
-	} else {
-		fmt.Print("ξ ﾟ⊿ ﾟ)ξ < args is ")
-		fmt.Println(args)
-		fmt.Println(args[0])
+		os.Exit(0)
 	}
+
+	// Get username from args
+	username := args[0]
+	getContributions(username)
 }
 
-// If args is nothing, print usage
 func printUsage() {
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Hello, I'm Tsunko!")
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < I will tell you how many your contributions on GitHub.")
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Please input and run 'tsuncon <your GitHub name>'")
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Bye!")
+}
+
+func getContributions(username string) error {
+	// processing
+	client := github.NewClient(nil)
 }
