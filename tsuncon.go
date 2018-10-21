@@ -4,6 +4,9 @@ import (
 	"flag"
 	"fmt"
 	"os"
+	"strconv"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 func main() {
@@ -30,6 +33,44 @@ func printUsage() {
 }
 
 func getContributions(username string) error {
-	// processing
+	// Set URL
+	url := "https://github.com/users/" + username + "/contributions"
+
+	// Get document
+	doc, err := goquery.NewDocument(url)
+	if err != nil {
+		return err
+	}
+
+	// Get the number of contributions
+	selection := doc.Find("rect").Last()
+	attr, exists := selection.Attr("data-count")
+	// Convert string to int
+	attrint, err := strconv.Atoi(attr)
+	if err != nil {
+		return err
+	}
+
+	if exists == true {
+		if 0 <= attrint && attrint <= 1 {
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contribution is " + attr + ".")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Let's contribute!")
+		}
+		if 2 <= attrint && attrint <= 5 {
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Let's contribute!")
+		}
+		if 6 <= attrint && attrint <= 10 {
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Nice!")
+		}
+		if 11 <= attrint {
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Greeeeat!")
+		}
+	} else {
+		fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The user you inputted doesn't exist.")
+	}
+
 	return nil
 }
