@@ -27,10 +27,10 @@ func main() {
 }
 
 func printUsage() {
-	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Hello, I'm Tsunko!")
-	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < I will let you know how many your contributions on GitHub.")
-	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Please input and run 'tsuncon <your GitHub name>'")
-	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Bye!")
+	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < 私の名前はつん子よ！")
+	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < 面倒だけどあんたの今日のContribution数を教えてあげるわ、感謝しなさい！")
+	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < こういう風に言ってくれれば教えてあげるわ -> 'tsuncon <your GitHub name>'")
+	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < じゃあね！")
 }
 
 func getContributions(username string) error {
@@ -58,20 +58,20 @@ func getContributions(username string) error {
 
 	if exists == true {
 		if 0 <= attrint && attrint <= 1 {
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contribution is " + attr + ".")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Let's contribute!")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < もっと頑張りなさいよね！")
 		} else if 2 <= attrint && attrint <= 5 {
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Let's contribute!")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < もっとやれるんじゃないの？")
 		} else if 6 <= attrint && attrint <= 10 {
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Nice!")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < まあまあね、褒めてあげる")
 		} else {
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The number of your contributions is " + attr + ".")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < Greeeeat!")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
+			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < へぇ、なかなかやるわね。ちょっと見直したかも。")
 		}
 	} else {
-		fmt.Println("ξ ﾟ⊿ ﾟ)ξ < The user you inputted doesn't exist.")
+		fmt.Println("ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！")
 	}
 
 	return nil
