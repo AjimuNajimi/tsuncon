@@ -19,6 +19,7 @@ tsuncon <your GitHub username>
 ## Contributing
 
 I need many many quotes to teach Tsunko!
+
 Please help me by creating PRs!
 
 (If merged your PR including quotes, I will post you in the scriptwriter's column.)
