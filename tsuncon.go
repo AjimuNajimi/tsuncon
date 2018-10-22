@@ -3,12 +3,37 @@ package main
 import (
 	"flag"
 	"fmt"
+	"math/rand"
 	"os"
 	"strconv"
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
 )
+
+var Level1 = []string{
+	"ξ ﾟ⊿ ﾟ)ξ < もっと頑張りなさい！",
+	"ξ ﾟ⊿ ﾟ)ξ < しっかりしなさいよね！",
+	"ξ ﾟ⊿ ﾟ)ξ < あんたなら出来るはずよ！",
+}
+
+var Level2 = []string{
+	"ξ ﾟ⊿ ﾟ)ξ < もっとやれるんじゃないの？",
+	"ξ ﾟ⊿ ﾟ)ξ < まだまだ開発するのよ！",
+	"ξ ﾟ⊿ ﾟ)ξ < こんなものじゃ足りないわ！",
+}
+
+var Level3 = []string{
+	"ξ ﾟ⊿ ﾟ)ξ < まあまあね、褒めてあげる。",
+	"ξ ﾟ⊿ ﾟ)ξ < ふーん、やるじゃない。",
+	"ξ ﾟ⊿ ﾟ)ξ < ついでに褒めてあげる。ついでによ、つ・い・で・に！",
+}
+
+var Level4 = []string{
+	"ξ ﾟ⊿ ﾟ)ξ < へぇ、すごいわね。ちょっと見直したかも。",
+	"ξ ﾟ⊿ ﾟ)ξ < す、すご……。ちょっ、今のなし！",
+	"ξ ﾟ⊿ ﾟ)ξ < 結構すごいんじゃないの、あんたにしては。",
+}
 
 func main() {
 	// parse args
@@ -58,18 +83,19 @@ func getContributions(username string) error {
 	}
 
 	if exists == true {
+		rand.Seed(time.Now().UnixNano())
 		if 0 <= attrint && attrint <= 1 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < もっと頑張りなさいよね！")
+			fmt.Println(Level1[rand.Intn(3)])
 		} else if 2 <= attrint && attrint <= 5 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < もっとやれるんじゃないの？")
+			fmt.Println(Level2[rand.Intn(3)])
 		} else if 6 <= attrint && attrint <= 10 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < まあまあね、褒めてあげる。")
+			fmt.Println(Level3[rand.Intn(3)])
 		} else {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < へぇ、なかなかやるわね。ちょっと見直したかも。")
+			fmt.Println(Level4[rand.Intn(3)])
 		}
 	} else {
 		fmt.Println("ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！")
