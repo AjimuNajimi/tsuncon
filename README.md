@@ -16,6 +16,13 @@ go get github.com/diplozoon/tsuncon
 tsuncon <your GitHub username>
 ```
 
+## Contributing
+
+I'm looking for quotes to teach Tsunko!
+Please help me by creating PRs!
+
+(If merged your PR including quotes, I will post you in the scriptwriter's column.)
+
 ## License
 
 > Copyright (c) 2018 Huyuumi
@@ -25,6 +32,14 @@ Tsuncon is an open-source software licensed under the [MIT](https://github.com/d
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Maintainer
+
+<table><tr>
+<td><img src="https://github.com/diplozoon.png?size=120" alt="Huyuumi" width="120" height="120"></td>
+</tr><tr>
+<td><a href="https://neet.club">Huyuumi</a></td>
+</tr></table>
+
+## Scriptwriter
 
 <table><tr>
 <td><img src="https://github.com/diplozoon.png?size=120" alt="Huyuumi" width="120" height="120"></td>
