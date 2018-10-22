@@ -11,24 +11,28 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+// Level1 -> 0 to 1
 var Level1 = []string{
 	"ξ ﾟ⊿ ﾟ)ξ < もっと頑張りなさい！",
 	"ξ ﾟ⊿ ﾟ)ξ < しっかりしなさいよね！",
 	"ξ ﾟ⊿ ﾟ)ξ < あんたなら出来るはずよ！",
 }
 
+// Level2 -> 2 to 5
 var Level2 = []string{
 	"ξ ﾟ⊿ ﾟ)ξ < もっとやれるんじゃないの？",
 	"ξ ﾟ⊿ ﾟ)ξ < まだまだ開発するのよ！",
 	"ξ ﾟ⊿ ﾟ)ξ < こんなものじゃ足りないわ！",
 }
 
+// Level3 -> 6 to 10
 var Level3 = []string{
 	"ξ ﾟ⊿ ﾟ)ξ < まあまあね、褒めてあげる。",
 	"ξ ﾟ⊿ ﾟ)ξ < ふーん、やるじゃない。",
 	"ξ ﾟ⊿ ﾟ)ξ < ついでに褒めてあげる。ついでによ、つ・い・で・に！",
 }
 
+// Level4 -> 11 or more
 var Level4 = []string{
 	"ξ ﾟ⊿ ﾟ)ξ < へぇ、すごいわね。ちょっと見直したかも。",
 	"ξ ﾟ⊿ ﾟ)ξ < す、すご……。ちょっ、今のなし！",
@@ -83,7 +87,9 @@ func getContributions(username string) error {
 	}
 
 	if exists == true {
+		// Generate seed
 		rand.Seed(time.Now().UnixNano())
+
 		if 0 <= attrint && attrint <= 1 {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
 			fmt.Println(Level1[rand.Intn(3)])
