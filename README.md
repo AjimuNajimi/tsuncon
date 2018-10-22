@@ -22,7 +22,7 @@ I need many many quotes to teach Tsunko!
 
 Please help me by creating PRs!
 
-(If merged your PR including quotes, I will post you in the scriptwriter's column.)
+(If merged your PR including quotes, I will post you in the collaborator's column.)
 
 ## License
 
@@ -40,10 +40,5 @@ Tsuncon is an open-source software licensed under the [MIT](https://github.com/d
 <td><a href="https://neet.club">Huyuumi</a></td>
 </tr></table>
 
-## Scriptwriter
+## Collaborator
 
-<table><tr>
-<td><img src="https://github.com/diplozoon.png?size=120" alt="Huyuumi" width="120" height="120"></td>
-</tr><tr>
-<td><a href="https://neet.club">Huyuumi</a></td>
-</tr></table>
