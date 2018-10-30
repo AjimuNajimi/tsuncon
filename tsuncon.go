@@ -89,17 +89,17 @@ func getContributions(username string) error {
 	if exists == true {
 		// Generate seed
 		rand.Seed(time.Now().UnixNano())
-
-		if 0 <= attrint && attrint <= 1 {
+		switch {
+		case 0 <= attrint && attrint <= 1:
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
 			fmt.Println(Level1[rand.Intn(3)])
-		} else if 2 <= attrint && attrint <= 5 {
+		case 2 <= attrint && attrint <= 5:
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
 			fmt.Println(Level2[rand.Intn(3)])
-		} else if 6 <= attrint && attrint <= 10 {
+		case 6 <= attrint && attrint <= 10:
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
 			fmt.Println(Level3[rand.Intn(3)])
-		} else {
+		default:
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
 			fmt.Println(Level4[rand.Intn(3)])
 		}
