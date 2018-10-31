@@ -42,3 +42,4 @@ Tsuncon is an open-source software licensed under the [MIT](https://github.com/d
 
 ## Collaborator
 
+Please send PRs!!
