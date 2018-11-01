@@ -20,7 +20,7 @@ tsuncon <your GitHub username>
 
 I need many many quotes to tell Tsunko!
 
-Please help me by creating PRs!
+Please help me by sending PRs!
 
 (If merged your PR including quotes, I will post you in the collaborator's column.)
 
