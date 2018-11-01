@@ -83,6 +83,7 @@ func getContributions(username string) error {
 	// Convert string to int
 	attrint, err := strconv.Atoi(attr)
 	if err != nil {
+		fmt.Println("ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！\n")
 		return err
 	}
 
@@ -103,8 +104,6 @@ func getContributions(username string) error {
 			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
 			fmt.Println(Level4[rand.Intn(3)])
 		}
-	} else {
-		fmt.Println("ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！")
 	}
 
 	return nil
