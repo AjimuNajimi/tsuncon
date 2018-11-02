@@ -62,7 +62,7 @@ func printUsage() {
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < じゃあね！")
 }
 
-func GetContributions(username string) error {
+func getContributions(username string) error {
 	// Deal with time zone
 	t := time.Now()
 	layout := "2006-01-02"
