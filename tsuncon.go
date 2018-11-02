@@ -52,7 +52,7 @@ func main() {
 
 	// Get username from args
 	username := args[0]
-	getContributions(username)
+	GetContributions(username)
 }
 
 func printUsage() {
@@ -62,7 +62,7 @@ func printUsage() {
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < じゃあね！")
 }
 
-func getContributions(username string) error {
+func GetContributions(username string) error {
 	// Deal with time zone
 	t := time.Now()
 	layout := "2006-01-02"

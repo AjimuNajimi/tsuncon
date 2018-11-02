@@ -1,12 +1,16 @@
 package main
 
 import (
+  "strings"
 	"testing"
 )
 
-func BenchmarkTsuncon(b *testing.B) {
-	b.ResetTimer()
-	for i := 0; i < b.N; i++ {
-		getContributions("diplozoon")
-	}
+func TestTsuncon(t *testing.T) {
+  msg, err := GetContributions("diplozoon")
+  if err != nil {
+    t.Fatal(err)
+  }
+  if !strings.Contains(msg, "ξ ﾟ⊿ ﾟ)ξ <") {
+    t.Errorf("expected ξ ﾟ⊿ ﾟ)ξ < something, got=%s", msg)
+  }
 }
