@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-  "log"
+	"log"
 	"math/rand"
 	"os"
 	"strconv"
@@ -53,14 +53,14 @@ func main() {
 
 	// Get username from args
 	username := args[0]
-  msg, err := getContributions(username)
-  if err != nil {
-    if msg != "" {
-      log.Fatal("\n" + msg)
-    }
-    log.Fatal(err)
-  }
-  fmt.Println(msg)
+	msg, err := getContributions(username)
+	if err != nil {
+		if msg != "" {
+			log.Fatal("\n" + msg)
+		}
+		log.Fatal(err)
+	}
+	fmt.Println(msg)
 }
 
 func printUsage() {
@@ -91,7 +91,7 @@ func getContributions(username string) (string, error) {
 	// Convert string to int
 	attrint, err := strconv.Atoi(attr)
 	if err != nil {
-    msg := "ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！"
+		msg := "ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！"
 		return msg, err
 	}
 
@@ -100,17 +100,17 @@ func getContributions(username string) (string, error) {
 		rand.Seed(time.Now().UnixNano())
 		switch {
 		case 0 <= attrint && attrint <= 1:
-      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level1[rand.Intn(3)]
-      return msg, nil
+			msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level1[rand.Intn(3)]
+			return msg, nil
 		case 2 <= attrint && attrint <= 5:
-      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level2[rand.Intn(3)]
-		  return msg, nil
-    case 6 <= attrint && attrint <= 10:
-      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level3[rand.Intn(3)]
-		  return msg, nil
-    default:
-      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level4[rand.Intn(3)]
-      return msg, nil
+			msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level2[rand.Intn(3)]
+			return msg, nil
+		case 6 <= attrint && attrint <= 10:
+			msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level3[rand.Intn(3)]
+			return msg, nil
+		default:
+			msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level4[rand.Intn(3)]
+			return msg, nil
 		}
 	}
 
