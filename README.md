@@ -1,5 +1,7 @@
 # Tsuncon
 
+[![Build Status](https://travis-ci.org/diplozoon/tsuncon.svg?branch=master)](https://travis-ci.org/diplozoon/tsuncon)
+
 Tsucon let you know how many contribution on GitHub today.
 
 ## Installation
