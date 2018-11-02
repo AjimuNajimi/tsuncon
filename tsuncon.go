@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+  "log"
 	"math/rand"
 	"os"
 	"strconv"
@@ -52,7 +53,14 @@ func main() {
 
 	// Get username from args
 	username := args[0]
-	GetContributions(username)
+  msg, err := getContributions(username)
+  if err != nil {
+    if msg != "" {
+      log.Fatal("\n" + msg)
+    }
+    log.Fatal(err)
+  }
+  fmt.Println(msg)
 }
 
 func printUsage() {
@@ -62,7 +70,7 @@ func printUsage() {
 	fmt.Println("ξ ﾟ⊿ ﾟ)ξ < じゃあね！")
 }
 
-func getContributions(username string) error {
+func getContributions(username string) (string, error) {
 	// Deal with time zone
 	t := time.Now()
 	layout := "2006-01-02"
@@ -74,7 +82,7 @@ func getContributions(username string) error {
 	// Get document
 	doc, err := goquery.NewDocument(url)
 	if err != nil {
-		return err
+		return "", err
 	}
 
 	// Get the number of contributions
@@ -83,8 +91,8 @@ func getContributions(username string) error {
 	// Convert string to int
 	attrint, err := strconv.Atoi(attr)
 	if err != nil {
-		fmt.Println("ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！\n")
-		return err
+    msg := "ξ ﾟ⊿ ﾟ)ξ < そんなユーザー名は存在しないわ！"
+		return msg, err
 	}
 
 	if exists == true {
@@ -92,19 +100,19 @@ func getContributions(username string) error {
 		rand.Seed(time.Now().UnixNano())
 		switch {
 		case 0 <= attrint && attrint <= 1:
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println(Level1[rand.Intn(3)])
+      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level1[rand.Intn(3)]
+      return msg, nil
 		case 2 <= attrint && attrint <= 5:
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println(Level2[rand.Intn(3)])
-		case 6 <= attrint && attrint <= 10:
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println(Level3[rand.Intn(3)])
-		default:
-			fmt.Println("ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！")
-			fmt.Println(Level4[rand.Intn(3)])
+      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level2[rand.Intn(3)]
+		  return msg, nil
+    case 6 <= attrint && attrint <= 10:
+      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level3[rand.Intn(3)]
+		  return msg, nil
+    default:
+      msg := "ξ ﾟ⊿ ﾟ)ξ < あんたの今日のContribution数は" + attr + "だわ！\n" + Level4[rand.Intn(3)]
+      return msg, nil
 		}
 	}
 
-	return nil
+	return "", nil
 }
