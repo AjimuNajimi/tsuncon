@@ -6,16 +6,20 @@ Tsucon let you know how many contribution on GitHub today.
 
 ## Installation
 
-Using Go
+###Download binary
+
+Download [here](https://github.com/diplozoon/tsuncon/releases).
+
+###Using Go
 
 ```bash
-go get github.com/diplozoon/tsuncon
+$ go get github.com/diplozoon/tsuncon
 ```
 
 ## Usage
 
 ```bash
-tsuncon <your GitHub username>
+$ tsuncon <your GitHub username>
 ```
 
 ## Contributing
