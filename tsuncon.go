@@ -12,6 +12,8 @@ import (
 	"github.com/PuerkitoBio/goquery"
 )
 
+var version = "0.1.1"
+
 // Level1 -> 0 to 1
 var Level1 = []string{
 	"ξ ﾟ⊿ ﾟ)ξ < もっと頑張りなさい！",
@@ -41,8 +43,18 @@ var Level4 = []string{
 }
 
 func main() {
+	var showVersion bool
+
+	flag.BoolVar(&showVersion, "v", false, "show version")
+	flag.BoolVar(&showVersion, "version", false, "show version")
 	// parse args
 	flag.Parse()
+
+	if showVersion {
+		fmt.Println("version:", version)
+		return
+	}
+
 	args := flag.Args()
 
 	// If args is nothing, print usage and exit.
