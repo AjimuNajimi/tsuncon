@@ -22,6 +22,13 @@ $ go get github.com/diplozoon/tsuncon
 $ tsuncon <your GitHub username>
 ```
 
+check the version as follow:
+```bash
+$ tsuncon -v
+
+$ tsuncon -version
+```
+
 ## Contributing
 
 I need many many quotes to tell Tsunko!
