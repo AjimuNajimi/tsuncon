@@ -10,6 +10,7 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/tcnksm/go-latest"
 )
 
 var version = "0.1.1"
@@ -43,6 +44,19 @@ var Level4 = []string{
 }
 
 func main() {
+	githubTag := &latest.GithubTag{
+		Owner: "diplozoon",
+		Repository: "tsuncon",
+	}
+
+	res, err := latest.Check(githubTag, version)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if res.Outdated {
+		fmt.Printf("%s is not latest, you should upgrade to %s\n\n", version, res.Current)
+	}
+
 	var showVersion bool
 
 	flag.BoolVar(&showVersion, "v", false, "show version")
