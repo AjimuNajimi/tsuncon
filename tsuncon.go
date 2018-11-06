@@ -45,7 +45,7 @@ var Level4 = []string{
 
 func main() {
 	githubTag := &latest.GithubTag{
-		Owner: "diplozoon",
+		Owner:      "diplozoon",
 		Repository: "tsuncon",
 	}
 
