@@ -54,7 +54,7 @@ func main() {
 		log.Fatal(err)
 	}
 	if res.Outdated {
-		fmt.Printf("%s is not latest, you should upgrade to %s\n\n", version, res.Current)
+		fmt.Printf("ξ ﾟ⊿ ﾟ)ξ < 今のバージョンは最新じゃないわ、%sにアップグレードしなさい！\n\n", res.Current)
 	}
 
 	var showVersion bool
@@ -65,7 +65,7 @@ func main() {
 	flag.Parse()
 
 	if showVersion {
-		fmt.Println("version:", version)
+		fmt.Printf("ξ ﾟ⊿ ﾟ)ξ < 今のバージョンは%sだわ！\n", version)
 		return
 	}
 
