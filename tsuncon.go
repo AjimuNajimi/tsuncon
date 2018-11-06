@@ -13,7 +13,7 @@ import (
 	"github.com/tcnksm/go-latest"
 )
 
-var version = "0.1.1"
+var version = "0.1.2"
 
 // Level1 -> 0 to 1
 var Level1 = []string{
