@@ -6,7 +6,7 @@ import (
 )
 
 func TestTsuncon(t *testing.T) {
-	msg, err := getContributions("diplozoon")
+	msg, err := getContributions("johntitor")
 	if err != nil {
 		t.Fatal(err)
 	}
