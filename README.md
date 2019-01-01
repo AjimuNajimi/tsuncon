@@ -10,7 +10,7 @@ Tsucon let you know how many contribution on GitHub today.
 
 Download [here](https://github.com/johntitor/tsuncon/releases).
 
-###Using Go
+### Using Go
 
 ```bash
 $ go get github.com/diplozoon/tsuncon
