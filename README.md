@@ -6,7 +6,7 @@ Tsucon let you know how many contribution on GitHub today.
 
 ## Installation
 
-###Download binary
+### Download binary
 
 Download [here](https://github.com/johntitor/tsuncon/releases).
 
