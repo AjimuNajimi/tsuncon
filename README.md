@@ -1,6 +1,6 @@
 # Tsuncon
 
-[![Build Status](https://travis-ci.org/johntitor/tsuncon.svg?branch=master)](https://travis-ci.org/johntitor/tsuncon)
+[![Build Status](https://travis-ci.org/JohnTitor/tsuncon.svg?branch=master)](https://travis-ci.org/JohnTitor/tsuncon)
 
 Tsucon let you know how many contribution on GitHub today.
 
