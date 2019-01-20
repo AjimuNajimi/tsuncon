@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.9
+      - image: circleci/golang:1.11
+
+    branches:
+      only:
+        - staging
+        - trying
+
+    steps:
+      - checkout
+      - restore_cahce:
+          keys:
+            - v1-pkg-cache
+
+      - run: go get -u github.com/golang/lint/golint
+      - run: go get -u github.com/PuerkitoBio/goquery
+      - run: go get -u github.com/tcnksm/go-latest
+
+      - run:
+          name: Go vet
+          command: |
+            go vet ./...
+      - run:
+          name: Go lint
+          command: |
+            go lint ./...
+      - run:
+          name: test
+          command: |
+            go test
+
+      - save_cache:
+          key: v1-pkg-cache
+          paths:
+            - "/go/pkg"
