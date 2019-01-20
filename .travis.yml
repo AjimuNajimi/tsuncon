@@ -2,7 +2,7 @@ language: go
 
 branches:
   only:
-    - staring
+    - staging
     - trying
     - master
 
