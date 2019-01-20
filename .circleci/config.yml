@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Go lint
           command: |
-            go lint ./...
+            golint ./...
       - run:
           name: test
           command: |
