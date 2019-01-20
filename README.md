@@ -13,7 +13,7 @@ Download [here](https://github.com/johntitor/tsuncon/releases).
 ### Using Go
 
 ```bash
-$ go get github.com/diplozoon/tsuncon
+$ go get github.com/JohnTitor/tsuncon
 ```
 
 ## Usage
