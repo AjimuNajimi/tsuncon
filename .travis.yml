@@ -1,5 +1,11 @@
 language: go
 
+branches:
+  only:
+    - staging
+    - trying
+    - master
+
 install:
   - go get -u github.com/golang/lint/golint
   - go get -u github.com/PuerkitoBio/goquery
