@@ -2,8 +2,7 @@ language: go
 
 branches:
   only:
-    - staging
-    - trying
+    - auto
     - master
 
 install:
