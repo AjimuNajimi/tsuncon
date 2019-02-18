@@ -13,20 +13,21 @@ Download [here](https://github.com/johntitor/tsuncon/releases).
 ### Using Go
 
 ```bash
-$ go get github.com/JohnTitor/tsuncon
+go get github.com/JohnTitor/tsuncon
 ```
 
 ## Usage
 
 ```bash
-$ tsuncon <your GitHub username>
+tsuncon <your GitHub username>
 ```
 
 check the version as follow:
-```bash
-$ tsuncon -v
 
-$ tsuncon -version
+```bash
+tsuncon -v
+
+tsuncon -version
 ```
 
 ## Contributing
