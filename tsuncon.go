@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/tcnksm/go-latest"
+	latest "github.com/tcnksm/go-latest"
 )
 
 var version = "0.1.2"
@@ -38,9 +38,9 @@ var Level3 = []string{
 
 // Level4 -> 11 or more
 var Level4 = []string{
-	"ξ ﾟ⊿ ﾟ)ξ < へぇ、すごいわね。ちょっと見直したかも。",
-	"ξ ﾟ⊿ ﾟ)ξ < す、すご……。ちょっ、今のなし！",
-	"ξ ﾟ⊿ ﾟ)ξ < 結構すごいんじゃないの、あんたにしては。",
+	"ξ(Ծ‸Ծ)ξ < へぇ、すごいわね。ちょっと見直したかも。",
+	"ξ(Ծ‸Ծ)ξ < す、すご……。ちょっ、今のなし！",
+	"ξ(Ծ‸Ծ)ξ < 結構すごいんじゃないの、あんたにしては。",
 }
 
 func main() {
